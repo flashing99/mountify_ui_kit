@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: <Widget>[
           ListTile(
-            title: Text('Onboarding type 1'),
+            title: Text('Onboarding type 1 - PageView'),
             contentPadding: EdgeInsets.all(8),
             leading: Icon(Icons.mobile_screen_share),
             onTap: () {
