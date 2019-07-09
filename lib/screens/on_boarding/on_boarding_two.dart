@@ -75,6 +75,24 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
 //**  ############ END VARS #####################
   @override
   Widget build(BuildContext context) {
+    //---------------------------
+
+    final basicCarouselSlider = CarouselSlider(
+      viewportFraction: 1.0,
+      //enableInfiniteScroll: true,
+      items: child,
+      autoPlay: false,
+      height: MediaQuery.of(context).size.height * 0.8,
+      enlargeCenterPage: true,
+      aspectRatio: 2.0,
+      onPageChanged: (index) {
+        setState(() {
+          _current = index;
+        });
+      },
+    );
+
+    //---------------------------
     return Scaffold(
       backgroundColor: BrandColor.getColor(BrandColors.DarkBlue),
       // appBar: AppBar(
@@ -89,20 +107,11 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
             Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           Flexible(
             flex: 9,
-            child: CarouselSlider(
-              viewportFraction: 1.0,
-              //enableInfiniteScroll: true,
-              items: child,
-              autoPlay: false,
-              height: MediaQuery.of(context).size.height * 0.8,
-              enlargeCenterPage: true,
-              aspectRatio: 2.0,
-              onPageChanged: (index) {
-                setState(() {
-                  _current = index;
-                });
-              },
-            ),
+            //**-------- CAROUSEL --------------- */
+
+            child: basicCarouselSlider,
+
+            //**---------------------------------- */
           ),
 
           Flexible(
@@ -145,8 +154,14 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
 
                   //------- Button Next ----------
                   MaterialButton(
-                    // color: Colors.transparent,
-                    onPressed: () {},
+                    onPressed: () {
+                      print(_current);
+                      //--------------------------
+                      basicCarouselSlider.nextPage(
+                          duration: Duration(milliseconds: 300),
+                          curve: Curves.easeOut);
+                      //---------------------------
+                    },
                     child: BrandText.getText(
                         BrandTexts.OnBoarding_1_Title, 'Next'),
                   ),
