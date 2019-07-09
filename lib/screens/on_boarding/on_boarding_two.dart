@@ -31,7 +31,7 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
     imgList,
     (index, i) {
       return Card(
-        margin: EdgeInsets.all(24),
+        margin: EdgeInsets.symmetric(horizontal: 32, vertical: 10),
 
         elevation: 8.0,
         clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -99,10 +99,10 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
       //   title: Text('Onboarding1'),
       // ),
       body: Container(
-        //height: 400,
-        //color: Colors.cyan,
         //padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * .10),
-        padding: EdgeInsets.only(top: 48),
+        padding: EdgeInsets.only(
+          top: 48,
+        ),
         child:
             Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           Flexible(
