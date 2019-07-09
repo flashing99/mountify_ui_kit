@@ -1,10 +1,11 @@
 # moutify_ui_kit
  
-## Customized- Onboard | Carousel 
+## Customized- Onboard | Carousel Slider
 
 
 A new Flutter project.
 Flutter: custom Onboard page with multiple widgets (Carousel Slider, Cards, Social links...)
+## Plugin:
 ``` Used plugin : carousel_slider: ^1.3.0 ```
 
 ## App Screen
