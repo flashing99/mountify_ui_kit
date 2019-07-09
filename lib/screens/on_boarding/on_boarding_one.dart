@@ -199,6 +199,7 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
             Column(children: [
               CarouselSlider(
                 viewportFraction: 0.7,
+                //enableInfiniteScroll: true,
                 items: child,
                 autoPlay: true,
                 height: 280,
@@ -239,14 +240,15 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 0, vertical: 16),
-                    child: BrandText.getOnboarding_1('REDY TO GET STARTED?'),
+                    child:
+                        BrandText.getOnboarding('REDY TO GET STARTED?', null),
                   ),
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 48, vertical: 8),
                     child: Material(
                       borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                       elevation: 5.0,
+                      elevation: 5.0,
                       child: FlatButton(
                         onPressed: () {},
                         color: Colors.blue.shade900,
@@ -268,10 +270,9 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
                       ),
                     ),
                   ),
-                  
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 48, vertical: 8),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 48, vertical: 8),
                     child: Material(
                       borderRadius: BorderRadius.all(Radius.circular(5.0)),
                       elevation: 5.0,

@@ -3,6 +3,7 @@ import './util/brand_colors..dart';
 
 //----------SCREENS ------------
 import './screens/on_boarding/on_boarding_one.dart';
+import './screens/on_boarding/on_boarding_two.dart';
 
 void main() => runApp(MyApp());
 
@@ -50,6 +51,18 @@ class _MyHomePageState extends State<MyHomePage> {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 //--------- On Boarding type 1 -------
                 return OnBoardingOne();
+              }));
+            },
+          ),
+          //-------------
+          ListTile(
+            title: Text('Onboarding type 2 - PageView'),
+            contentPadding: EdgeInsets.all(8),
+            leading: Icon(Icons.mobile_screen_share),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                //--------- On Boarding type 1 -------
+                return OnBoardingTwo();
               }));
             },
           )
