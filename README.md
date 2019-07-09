@@ -9,7 +9,7 @@ A new Flutter project : customizd Onboard page with multiple widgets (Carousel S
 
 ## App Screen
 
-<img src="assets/src_img/flutter_UI_Onboarding 1.png" height="480px" > 	
+<img src="assets/src_img/flutter_UI_Onboarding 1.png" height="480px" > <img src="assets/src_img/flutter_UI_Onboarding 2.png" height="480px" > 
 
 ## Getting Started
 
