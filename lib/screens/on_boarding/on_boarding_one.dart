@@ -4,6 +4,7 @@ import '../../util/brand_colors..dart';
 import '../../util/brand_text.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 //-----------------------------------------------
 
@@ -43,7 +44,7 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
         padding: const EdgeInsets.only(top: 16),
         child: Card(
           margin: EdgeInsets.all(0),
-          elevation:8.0,
+          elevation: 8.0,
           clipBehavior: Clip.antiAliasWithSaveLayer,
           //--*************** START CARD ***********************
           child: Padding(
@@ -174,11 +175,12 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
       //   title: Text('Onboarding1'),
       // ),
       body: Container(
-        padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * .10),
+        //padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * .10),
+        padding: EdgeInsets.only(top: 48),
         child: Column(
           children: <Widget>[
             //--- Title
-            BrandText.getText(BrandTexts.OnBoarding_1_Title, 'New Feed'),
+            BrandText.getText(BrandTexts.OnBoarding_1_Title, 'New Feeds'),
             //---Content
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 48),
@@ -196,6 +198,7 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
             //---Carousel sider withe indicators
             Column(children: [
               CarouselSlider(
+                viewportFraction: 0.7,
                 items: child,
                 autoPlay: true,
                 height: 280,
@@ -231,9 +234,68 @@ class _OnBoardingOneState extends State<OnBoardingOne> {
               ),
 
               //------- TITLE +  RS----------
-            
 
-
+              Column(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 0, vertical: 16),
+                    child: BrandText.getOnboarding_1('REDY TO GET STARTED?'),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 48, vertical: 8),
+                    child: Material(
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                       elevation: 5.0,
+                      child: FlatButton(
+                        onPressed: () {},
+                        color: Colors.blue.shade900,
+                        padding: EdgeInsets.only(top: 16, bottom: 16),
+                        child: Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                FontAwesomeIcons.facebookF,
+                                color: Colors.white,
+                                //size: 16,
+                              ),
+                              BrandText.getButtonRsTitle(
+                                  ' Login With Facebook'),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 48, vertical: 8),
+                    child: Material(
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                      elevation: 5.0,
+                      child: FlatButton(
+                        onPressed: () {},
+                        color: Colors.blue.shade400,
+                        padding: EdgeInsets.only(top: 16, bottom: 16),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(
+                              FontAwesomeIcons.twitter,
+                              color: Colors.white,
+                              //size: 16,
+                            ),
+                            BrandText.getButtonRsTitle(' Login With Twitter'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              )
+              //--------------
             ]),
 
             //******************++++ PAGE VIEW Builder ++++******************* */
