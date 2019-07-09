@@ -1,6 +1,6 @@
 # moutify_ui_kit
  
-## Customized- Onboard | Carousel Slider
+## Customized- Animated Onboard | Carousel Slider
 
 
 A new Flutter project.
