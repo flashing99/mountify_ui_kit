@@ -8,7 +8,7 @@ Flutter: custom enDrawer with multiple widgets (Profile, delete and validate rea
 
 ## App Screen
 
-<img src="screens/01.png" height="480px" > 	 <img height="480px" src="screens/02.png"><a href="http://www.youtube.com/watch?feature=player_embedded&v=FLW1XyUsXZg" target="_blank">  <img src="screens/movie.png" alt="Animation app" height="480px" border="10" /></a>
+<img src="assets/src_img/flutter_UI_Onboarding 1.png" height="480px" > 	
 
 ## Getting Started
 
