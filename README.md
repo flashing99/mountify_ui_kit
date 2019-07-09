@@ -4,7 +4,8 @@
 
 
 A new Flutter project.
-Flutter: custom enDrawer with multiple widgets (Profile, delete and validate readed friends messages...)
+Flutter: custom Onboard page with multiple widgets (Carousel Slider, Cards, Social links...)
+``` Used plugin : carousel_slider: ^1.3.0 ```
 
 ## App Screen
 
