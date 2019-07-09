@@ -126,7 +126,9 @@ class _OnBoardingTwoState extends State<OnBoardingTwo> {
                   //------- Button Skipe ----------
                   MaterialButton(
                     // color: Colors.transparent,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
                     child: BrandText.getText(
                         BrandTexts.OnBoarding_1_Title, 'Skipe'),
                   ),
